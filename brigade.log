@@ -4698,3 +4698,271 @@ Authentication failed.
 NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
 Authentication failed.
 
+2018-05-09 18:21:44,765 -      brigade -     INFO -        run() - Running task 'napalm_get' with num_workers: 20
+2018-05-09 18:21:44,765 -      brigade -     INFO -        run() - Running task 'napalm_get' with num_workers: 20
+2018-05-09 18:21:44,765 -      brigade -    DEBUG -        run() - {'getters': ['get_facts']}
+2018-05-09 18:21:44,765 -      brigade -    DEBUG -        run() - {'getters': ['get_facts']}
+2018-05-09 18:21:44,771 -      brigade -     INFO -      start() - nexus2.nxos: napalm_get: running task
+2018-05-09 18:21:44,771 -      brigade -     INFO -      start() - nexus1.nxos: napalm_get: running task
+2018-05-09 18:21:44,771 -      brigade -     INFO -      start() - nexus2.nxos: napalm_get: running task
+2018-05-09 18:21:44,771 -      brigade -     INFO -      start() - nexus1.nxos: napalm_get: running task
+2018-05-09 18:21:44,771 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:21:44,771 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:21:44,772 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:21:44,772 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:21:44,772 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:21:44,772 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:21:44,772 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:21:44,772 -      brigade -     INFO -      start() - nexus2.nxos: napalm_connection: running task
+2018-05-09 18:21:44,772 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:21:44,772 -      brigade -     INFO -      start() - nexus2.nxos: napalm_connection: running task
+2018-05-09 18:21:44,773 -      brigade -     INFO -      start() - nexus1.nxos: napalm_connection: running task
+2018-05-09 18:21:44,773 -      brigade -     INFO -      start() - nexus1.nxos: napalm_connection: running task
+2018-05-09 18:28:39,271 -      brigade -     INFO -        run() - Running task 'napalm_get' with num_workers: 20
+2018-05-09 18:28:39,271 -      brigade -     INFO -        run() - Running task 'napalm_get' with num_workers: 20
+2018-05-09 18:28:39,271 -      brigade -    DEBUG -        run() - {'getters': ['get_facts']}
+2018-05-09 18:28:39,271 -      brigade -    DEBUG -        run() - {'getters': ['get_facts']}
+2018-05-09 18:28:39,276 -      brigade -     INFO -      start() - nexus2.nxos: napalm_get: running task
+2018-05-09 18:28:39,276 -      brigade -     INFO -      start() - nexus2.nxos: napalm_get: running task
+2018-05-09 18:28:39,277 -      brigade -     INFO -      start() - nexus1.nxos: napalm_get: running task
+2018-05-09 18:28:39,277 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:28:39,277 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:28:39,277 -      brigade -     INFO -      start() - nexus1.nxos: napalm_get: running task
+2018-05-09 18:28:39,277 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:28:39,278 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:28:39,278 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:28:39,278 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:28:39,278 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:28:39,277 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:28:39,278 -      brigade -     INFO -      start() - nexus1.nxos: napalm_connection: running task
+2018-05-09 18:28:39,278 -      brigade -     INFO -      start() - nexus2.nxos: napalm_connection: running task
+2018-05-09 18:28:39,278 -      brigade -     INFO -      start() - nexus1.nxos: napalm_connection: running task
+2018-05-09 18:28:39,278 -      brigade -     INFO -      start() - nexus2.nxos: napalm_connection: running task
+2018-05-09 18:28:41,761 -      brigade -    ERROR -      start() - nexus1.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/connections/napalm_connection.py", line 31, in napalm_connection
+    host.connections["napalm"].open()
+  File "/Library/Python/2.7/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 405, in open
+    **self.netmiko_optional_args)
+  File "/Library/Python/2.7/site-packages/netmiko/ssh_dispatcher.py", line 178, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 207, in __init__
+    self.establish_connection()
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 698, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:28:41,761 -      brigade -    ERROR -      start() - nexus1.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/connections/napalm_connection.py", line 31, in napalm_connection
+    host.connections["napalm"].open()
+  File "/Library/Python/2.7/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 405, in open
+    **self.netmiko_optional_args)
+  File "/Library/Python/2.7/site-packages/netmiko/ssh_dispatcher.py", line 178, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 207, in __init__
+    self.establish_connection()
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 698, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:28:41,762 -      brigade -    ERROR -      start() - nexus2.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/connections/napalm_connection.py", line 31, in napalm_connection
+    host.connections["napalm"].open()
+  File "/Library/Python/2.7/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 405, in open
+    **self.netmiko_optional_args)
+  File "/Library/Python/2.7/site-packages/netmiko/ssh_dispatcher.py", line 178, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 207, in __init__
+    self.establish_connection()
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 698, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:28:41,762 -      brigade -    ERROR -      start() - nexus2.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/connections/napalm_connection.py", line 31, in napalm_connection
+    host.connections["napalm"].open()
+  File "/Library/Python/2.7/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 405, in open
+    **self.netmiko_optional_args)
+  File "/Library/Python/2.7/site-packages/netmiko/ssh_dispatcher.py", line 178, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 207, in __init__
+    self.establish_connection()
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 698, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:28:41,763 -      brigade -    ERROR -      start() - nexus1.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/networking/napalm_get.py", line 16, in napalm_get
+    device = task.host.get_connection("napalm")
+  File "/Library/Python/2.7/site-packages/brigade/core/inventory.py", line 245, in get_connection
+    raise r[self.name].exception
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:28:41,763 -      brigade -    ERROR -      start() - nexus1.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/networking/napalm_get.py", line 16, in napalm_get
+    device = task.host.get_connection("napalm")
+  File "/Library/Python/2.7/site-packages/brigade/core/inventory.py", line 245, in get_connection
+    raise r[self.name].exception
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:28:41,763 -      brigade -    ERROR -      start() - nexus2.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/networking/napalm_get.py", line 16, in napalm_get
+    device = task.host.get_connection("napalm")
+  File "/Library/Python/2.7/site-packages/brigade/core/inventory.py", line 245, in get_connection
+    raise r[self.name].exception
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:28:41,763 -      brigade -    ERROR -      start() - nexus2.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/networking/napalm_get.py", line 16, in napalm_get
+    device = task.host.get_connection("napalm")
+  File "/Library/Python/2.7/site-packages/brigade/core/inventory.py", line 245, in get_connection
+    raise r[self.name].exception
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:29:21,372 -      brigade -     INFO -        run() - Running task 'napalm_get' with num_workers: 20
+2018-05-09 18:29:21,372 -      brigade -     INFO -        run() - Running task 'napalm_get' with num_workers: 20
+2018-05-09 18:29:21,372 -      brigade -    DEBUG -        run() - {'getters': ['get_facts']}
+2018-05-09 18:29:21,372 -      brigade -    DEBUG -        run() - {'getters': ['get_facts']}
+2018-05-09 18:29:21,378 -      brigade -     INFO -      start() - nexus2.nxos: napalm_get: running task
+2018-05-09 18:29:21,378 -      brigade -     INFO -      start() - nexus1.nxos: napalm_get: running task
+2018-05-09 18:29:21,378 -      brigade -     INFO -      start() - nexus2.nxos: napalm_get: running task
+2018-05-09 18:29:21,378 -      brigade -     INFO -      start() - nexus1.nxos: napalm_get: running task
+2018-05-09 18:29:21,379 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:29:21,379 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:29:21,379 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:29:21,379 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:29:21,379 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:29:21,379 -      brigade -     INFO -        run() - Running task 'napalm_connection' with num_workers: 1
+2018-05-09 18:29:21,380 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:29:21,380 -      brigade -    DEBUG -        run() - {}
+2018-05-09 18:29:21,380 -      brigade -     INFO -      start() - nexus2.nxos: napalm_connection: running task
+2018-05-09 18:29:21,380 -      brigade -     INFO -      start() - nexus2.nxos: napalm_connection: running task
+2018-05-09 18:29:21,380 -      brigade -     INFO -      start() - nexus1.nxos: napalm_connection: running task
+2018-05-09 18:29:21,380 -      brigade -     INFO -      start() - nexus1.nxos: napalm_connection: running task
+2018-05-09 18:29:23,819 -      brigade -    ERROR -      start() - nexus2.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/connections/napalm_connection.py", line 31, in napalm_connection
+    host.connections["napalm"].open()
+  File "/Library/Python/2.7/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 405, in open
+    **self.netmiko_optional_args)
+  File "/Library/Python/2.7/site-packages/netmiko/ssh_dispatcher.py", line 178, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 207, in __init__
+    self.establish_connection()
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 698, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:29:23,819 -      brigade -    ERROR -      start() - nexus2.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/connections/napalm_connection.py", line 31, in napalm_connection
+    host.connections["napalm"].open()
+  File "/Library/Python/2.7/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 405, in open
+    **self.netmiko_optional_args)
+  File "/Library/Python/2.7/site-packages/netmiko/ssh_dispatcher.py", line 178, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 207, in __init__
+    self.establish_connection()
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 698, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:29:23,819 -      brigade -    ERROR -      start() - nexus1.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/connections/napalm_connection.py", line 31, in napalm_connection
+    host.connections["napalm"].open()
+  File "/Library/Python/2.7/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 405, in open
+    **self.netmiko_optional_args)
+  File "/Library/Python/2.7/site-packages/netmiko/ssh_dispatcher.py", line 178, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 207, in __init__
+    self.establish_connection()
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 698, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:29:23,819 -      brigade -    ERROR -      start() - nexus1.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/connections/napalm_connection.py", line 31, in napalm_connection
+    host.connections["napalm"].open()
+  File "/Library/Python/2.7/site-packages/napalm/nxos_ssh/nxos_ssh.py", line 405, in open
+    **self.netmiko_optional_args)
+  File "/Library/Python/2.7/site-packages/netmiko/ssh_dispatcher.py", line 178, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 207, in __init__
+    self.establish_connection()
+  File "/Library/Python/2.7/site-packages/netmiko/base_connection.py", line 698, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:29:23,820 -      brigade -    ERROR -      start() - nexus1.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/networking/napalm_get.py", line 16, in napalm_get
+    device = task.host.get_connection("napalm")
+  File "/Library/Python/2.7/site-packages/brigade/core/inventory.py", line 245, in get_connection
+    raise r[self.name].exception
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:29:23,820 -      brigade -    ERROR -      start() - nexus2.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/networking/napalm_get.py", line 16, in napalm_get
+    device = task.host.get_connection("napalm")
+  File "/Library/Python/2.7/site-packages/brigade/core/inventory.py", line 245, in get_connection
+    raise r[self.name].exception
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:29:23,820 -      brigade -    ERROR -      start() - nexus2.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/networking/napalm_get.py", line 16, in napalm_get
+    device = task.host.get_connection("napalm")
+  File "/Library/Python/2.7/site-packages/brigade/core/inventory.py", line 245, in get_connection
+    raise r[self.name].exception
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
+2018-05-09 18:29:23,820 -      brigade -    ERROR -      start() - nexus1.nxos: Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/brigade/core/task.py", line 62, in start
+    r = self.task(self, **self.params)
+  File "/Library/Python/2.7/site-packages/brigade/plugins/tasks/networking/napalm_get.py", line 16, in napalm_get
+    device = task.host.get_connection("napalm")
+  File "/Library/Python/2.7/site-packages/brigade/core/inventory.py", line 245, in get_connection
+    raise r[self.name].exception
+NetMikoAuthenticationException: Authentication failure: unable to connect cisco_nxos 127.0.0.1:22
+Authentication failed.
+
