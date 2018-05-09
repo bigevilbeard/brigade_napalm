@@ -1,0 +1,5 @@
+---
+nxos:
+  brigade_username: vagrant
+  brigade_password: vagrant
+  brigade_nos: nxos_ssh

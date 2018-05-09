@@ -1,0 +1,20 @@
+---
+nexus1.nxos:
+    brigade_host: 127.0.0.1
+    # brigade_ssh_port: 3122
+    napalm_port: 3122
+    # brigade_username: vagrant
+    # brigade_password: vagrant
+    # brigade_network_api_port: 3180 
+    groups: ['nxos']
+    # nos: nxos_ssh
+
+nexus2.nxos:
+    brigade_host: 127.0.0.1
+    # brigade_ssh_port: 3222
+    napalm_port: 3222
+    # brigade_username: vagrant
+    # brigade_password: vagrant
+    # brigade_network_api_port: 3280
+    groups: ['nxos']
+    # nos: nxos_ssh
